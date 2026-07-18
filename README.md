@@ -1,31 +1,19 @@
-# Lab 1 — Relleno de polígonos
+# Lab 1 - Relleno de poligonos
 
-Laboratorio de Gráficas por Computadora. Implementa un algoritmo de relleno de
-polígonos por **scan-line** con la **regla par-impar** (even-odd), escrito en
-Rust y sin dependencias externas (el PNG se genera con un encoder propio).
+Lab de graficas por computadora. Rellena poligonos con el algoritmo de scanline
+y dibuja las orillas con DDA.
 
-## Qué hace
+Son 5 poligonos, cada uno con su color. El poligono 5 es un agujero adentro del
+poligono 4 asi que se pinta del color del fondo para que se vea vacio.
 
-- Dibuja y rellena 5 polígonos, cada uno con su color de relleno y de línea:
-  - **Polígono 1** (estrella, 10 vértices) — amarillo
-  - **Polígono 2** (cuadrilátero) — azul
-  - **Polígono 3** (triángulo) — rojo
-  - **Polígono 4** (tetera, 18 vértices) — verde
-  - **Polígono 5** — agujero dentro del polígono 4, no se rellena
-- El agujero se logra pasando ambos contornos al mismo relleno par-impar:
-  las intersecciones del contorno interior alternan la paridad y dejan la
-  región sin pintar.
-- Las líneas se trazan con el algoritmo de Bresenham.
-- El resultado se guarda en `out.png` (800×450, origen abajo-izquierda).
+## Como correrlo
 
-## Cómo ejecutar
-
-```sh
-cargo run --release
+```
+cargo run
 ```
 
-Genera `out.png` en la raíz del proyecto.
+Eso genera el archivo `out.png`.
 
 ## Resultado
 
-![out](out.png)
+![resultado](out.png)
